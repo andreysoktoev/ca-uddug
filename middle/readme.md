@@ -1,5 +1,22 @@
 # Middle Go / Node.js Dev
 
+    npm i
+    npm start
+
+Я сделал 3 api: `/:user/message`, `/:user/pay`, `/signup`.
+
+    localhost:3000/:user/message
+
+A user can send only one message per second.
+
+    localhost:3000/:user/pay
+
+A user is allowed only three failed credit card transactions per day.
+
+    localhost:3000/signup
+
+A single IP can only create twenty accounts per day.
+
 ## Description
 
 Imagine we have a service which is receiving a huge number of requests, but it can only serve a limited number of requests per specific period of time. To handle this problem we would need some kind of throttling or rate limiting mechanism that would allow only a certain number of requests so our service can respond to all of them. A rate limiter, at a high-level, limits the number of events an entity (user, device, IP, etc.) can perform in a particular time window. For example:
